@@ -1,4 +1,5 @@
 from numpy import *
+from scipy.optimize import fsolve
 
 def rungekutta4(f, alpha, a, b, N, F):
     """
@@ -108,3 +109,18 @@ def bisection(f, a, b, bisection_iterations,tol):
             a = c
         print("[",a,",",b,"]: f(",c,")=",f(c))
     return c
+
+
+def Nu(beta, s):
+    def equation(nu):
+        return cos(nu) - (2 * nu**2 - s**2 * beta**2) / sqrt(beta**2 * nu**2 + s**4 * beta**4)
+
+    # Initial guess for nu, could be any value in the range (0, pi)
+    initial_guess = pi / 2
+    solution = fsolve(equation, initial_guess)
+
+    # Ensure the solution is within the desired range (0, pi)
+    if 0 < solution[0] < pi:
+        return solution[0]
+    else:
+        raise ValueError("Solution is not within the range (0, pi)")
