@@ -10,4 +10,4 @@ These numerics were developed for research projects looking at deformed versions
 
 -Krylov complexity and chaos in deformed Sachdev-Ye-Kitaev models Phys.Rev.B 111 (2025) 3, 035141 https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.035141
 
-More detailed documentation on the numerics methods used can be found in Section 3 of my thesis https://kclpure.kcl.ac.uk/portal/en/studentTheses/deformed-syk-holography
+More detailed documentation on the numerical methods used can be found in Section 3 of my thesis https://kclpure.kcl.ac.uk/portal/en/studentTheses/deformed-syk-holography
